@@ -1,0 +1,68 @@
+.topnav {
+    background-color:rgb(40, 40, 53);
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index:100;
+}
+
+.topnav a {
+    float: left;
+    font-size:15px;
+    color:white;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration:none;
+    width:100px;
+}
+
+.loginOption {
+    margin-left:90vw;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbutton {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0px;
+    background-color: rgb(40, 40, 53);
+    margin: 0;
+}
+
+.topnav a:hover {
+    /* background-color:cadetblue; */
+
+    background-color: #f5a95d;
+}
+
+.dropbutton{display:block}
+
+.logoutForm input[type=submit] {
+    text-align: center;
+    border:none;
+    color:white;
+    background-color:rgb(40, 40, 53);
+    font-size:16px;
+    padding: 14px 16px;
+    height:50px;
+    cursor: pointer;
+    left:auto;
+}
+
+.logo{
+    position: absolute;
+    padding:5px;
+    padding-top:1px;
+    padding-bottom:10px;
+    margin-left:100px;
+    height:60px;
+    width:295px;
+    top:0;
+}

@@ -1,0 +1,252 @@
+body {
+    background: #707D8F;
+  }
+  /* .workouts {
+    
+    
+  } */
+
+  .workout__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.875rem;
+    
+  }
+
+  @media (min-width: 40em) {
+    .workout__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 64em) {
+    .workout__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+ 
+
+  .workout__item {
+    border-radius: 0.3125rem;
+    overflow: hidden;
+    background-color: rgb(4, 86, 89);
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+    transition: all 150ms ease-in-out;
+    opacity: 1;
+  }
+
+  .workout__item:hover {
+    transform: scale(1.05);
+  }
+
+  .workout__image {
+    height: 24rem;
+    background-color: rgb(255, 255, 255);
+    
+    background-size: 400px, auto, contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .workout__text {
+    padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+    color: #d2d4e0;
+  }
+
+  @media (min-width: 40em) {
+    .workout__text {
+      padding: 1.875rem 1.5625rem;
+    }
+  }
+
+  .workout__title {
+    font-size: 1.0625rem;
+    line-height: 1.2;
+    color: #09e896;
+    margin-bottom: 0.5rem;
+  }
+
+  .workout__description {
+    font-size: 0.8125rem;
+
+  }
+
+  h1{
+    text-align: center;
+    margin-bottom: 1.70rem;
+  }
+  html {
+    height:100%;
+  }
+  
+  body {
+    margin: 30px;
+    margin-top:200px ;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  .content {
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+  }
+  
+  h2 {
+    font-family:monospace;
+    text-align: center;
+    font-size: 250%;
+    color: rgb(4, 86, 89);
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+  
+  /* CSS for button */
+  /* only animate if the device supports hover */
+@media (hover: hover) {
+  #creditcard {
+    /*  set start position */
+    transform: translateY(110px);
+    transition: transform 0.1s ease-in-out;
+    /*  set transition for mouse enter & exit */
+  }
+
+  #money {
+    /*  set start position */
+    transform: translateY(180px);
+    transition: transform 0.1s ease-in-out;
+    /*  set transition for mouse enter & exit */
+  }
+
+  button:hover #creditcard {
+    transform: translateY(0px);
+    transition: transform 0.2s ease-in-out;
+    /*  overide transition for mouse enter */
+  }
+
+  button:hover #money {
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out;
+    /*  overide transition for mouse enter */
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button:hover .button__text span {
+  transform: translateY(-0.25rem);
+  transition: transform .2s ease-in-out;
+}
+
+/* styling */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background-color: purple;
+  padding: 1rem 90px 1rem 2rem;
+  position: relative;
+  border-radius: 8px;
+  letter-spacing: 0.7px;
+  background-color: #22cab1;
+  color: #fff;
+  font-size: 21px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button__svg {
+  position: absolute;
+  overflow: visible;
+  bottom: 6px;
+  right: 0.2rem;
+  height: 140%;
+}
+
+/* Bullen */
+
+
+.workout__button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  padding: 0.7rem 0.7rem;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background-color :  #00ffea;
+   color:  #000000;
+  border:2px solid #000000;
+  transition: 0.2s ease ;
+    }
+    
+.workout__button:hover {
+  border-radius:2rem;
+  }
+
+

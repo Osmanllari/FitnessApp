@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    
+    
+    <title>Workout Planner</title>    
+    <link rel="icon" href="https://www.logolynx.com/images/logolynx/67/6768ca606797b732785b029a64c1384b.png" type="image/x-icon"/> 
+    <link rel="stylesheet" type="text/css" href="../css/nav_style.css">
+  
+    <link href="../popupstyles.css" rel="stylesheet">
+    <link href="workouts.css" rel="stylesheet">
+    <script defer src="../popupscript.js"></script>  
+  
+    <style>
+     
+     .topnav, .topnav a {
+        height:50px;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16;
+      }
+      
+      .workouts { 
+        padding-top: 15%;
+      }
+    </style>
+  
+  </head>
+  
+  <body>
+  <!-- navigation bar -->
+  <div class="topnav">
+    <div class="dropdown">
+      <a href="../index.php">Index</a>
+    </div>
+  
+    <div class="dropdown">
+        <button class="dropbutton"><a href="../searchEngine.php">Search</a>
+        </button>
+    </div>
+  
+    <div class="dropdown">
+        <button class="dropbutton"><a href="../chooseWorkout.php">Workouts</a>
+        </button>
+    </div>
+  
+    <div class="dropdown">
+        <button class="dropbutton"><a href="../profile.php">Profile</a>
+        </button>
+    </div>
+  
+    <div class="dropdown">
+        <button class="dropbutton"><a href="../thessmap.php">Map</a>
+        </button>
+    </div>
+  
+    <div class="dropdown">
+        <button class="dropbutton"><a href="../aboutus.php">About Us</a>
+        </button>
+    </div>
+
+    <div class="logoImage">
+      <img src="../images/Logo-White.png" class="logo">
+    </div>
+  
+    <div class="loginOption" >
+      <form name="logout" class="logoutForm" action="../php/loginphp/logout.php" method="POST">
+          <input type="submit" class="button" value="Log Out">
+      </form>
+    </div>
+  </div>
+  
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+  
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Add A Workout</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form name="exerciseName" action=".././calendar/quickstart.php" method="POST">
+        <div class="selectExercise"></div>
+        <label for="exerciseLabel">Exercise:</label>
+        
+          <select id="exerciseName" name="exerciseName" class="ui dropdown">
+            <option value="No exercise selected">Select an exercise</option>
+            <option value="Sit-Ups">Sit-Ups</option>
+            <option value="Spiderman Plank">Spiderman Plank</option>
+            <option value="Plank">Plank</option>
+            <option value="Abs Roll-out">Abs Roll-out</option>
+            <option value="Reverse Crunch">Reverse Crunch</option>
+            <option value="EZ Bar Preacher Curls">EZ Bar Preacher Curls</option>
+          </select>
+        </div>
+        <br>
+        <br>
+        <div class="selectDate">
+          <label for="date">Select date:</label>
+          <br>
+          <input type="date" id="exerciseDate" name="exerciseDate" > <!-- value="<?php echo date('Y-m-d'); ?>" -->
+        </div>
+        
+        <br>
+        <br>
+        <input type="submit" class="button" value="Add to calendar"> 
+      </form> 
+    </div>
+  </div>
+  <div id="overlay"></div>
+
+
+
+
+  <section class="workouts">
+    <div class="workout__content container container--pall">
+      <h2>Abs Workouts</h2>
+      <br>
+
+      
+      <div class="workout__grid">
+
+        <div class="workout__item">
+          <div class="workout__image" style="background-image: url('../images/situp.png')">
+          </div>
+          <div class="workout__text">
+            <div class="workout__title">
+              Sit-Ups
+            </div>
+            <div class="workout__description">
+              Sit-ups are a classic abdominal exercise that use your body weight to strengthen and tone the core-stabilizing abdominal muscles.
+            </div>
+            <br>
+            <button class="workout__button" data-modal-target="#modal">Add Workout</button>
+
+          </div>
+        </div>
+
+        
+
+
+        
+        <div class="workout__item">
+          <div class="workout__image" style="background-image: url('../images/Spiderman Plank.png')">
+          </div>
+          <div class="workout__text">
+            <div class="workout__title">
+              Spiderman Plank
+            </div>
+            <div class="workout__description">
+              The spiderman plank is a bodyweight exercise that works mainly the core and the upper body.
+            </div>
+            <br>
+            <button class="workout__button" data-modal-target="#modal">Add Workout</button>
+          </div>
+        </div>
+      
+      
+
+
+        <div class="workout__item">
+          <div class="workout__image" style="background-image: url('../images/Plank.png')">
+          </div>
+          <div class="workout__text">
+            <div class="workout__title">
+              Plank
+            </div>
+            <div class="workout__description">
+              The plank is a bodyweight exercise which involves holding the trunk part of your body in a straight line
+              off the ground.
+            </div>
+            <br>
+            <button class="workout__button" data-modal-target="#modal">Add Workout</button>
+          </div>
+        </div>
+
+        
+
+        <div class="workout__item">
+          <div class="workout__image" style="background-image: url('../images/Abs\ roll-out.png')">
+          </div>
+          <div class="workout__text">
+            <div class="workout__title">
+              Abs Roll-out
+            </div>
+            <div class="workout__description">
+              The ab rollout is an exercise designed to target the core muscles, including the rectus abdominis, obliques, and erector spinae. 
+            </div>
+            <br>
+            <button class="workout__button" data-modal-target="#modal">Add Workout</button>
+          </div>
+        </div>
+
+        <div class="workout__item">
+          <div class="workout__image" style="background-image: url('../images/Leg-raise.webp')">
+          </div>
+          <div class="workout__text">
+            <div class="workout__title">
+              Leg Raise
+            </div>
+            <div class="workout__description">
+              The leg raise is a strength training exercise which targets the iliopsoas and are also often used to strengthen the rectus abdominis muscle, the internal and external oblique muscles. 
+            </div>
+            <br>
+            <button class="workout__button" data-modal-target="#modal">Add Workout</button>
+          </div>
+        </div>
+
+        <div class="workout__item">
+          <div class="workout__image" style="background-image: url('../images/Reverse\ crunch.png')">
+          </div>
+          <div class="workout__text">
+            <div class="workout__title">
+              Reverse Crunch
+            </div>
+            <div class="workout__description">
+              The reverse crunch is an intermediate level variation of the popular abdominal crunch exercise. It exercises the full length of the deep lower abs.
+            </div>
+            <br>
+            <button class="workout__button" data-modal-target="#modal">Add Workout</button>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+  
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+  
+    let today = year + "-" + month + "-" + day;  
+    
+    document.getElementById('exerciseDate').value = today;
+    
+  </script>
+
+</body>
+
+
+
+
+
+</html>
